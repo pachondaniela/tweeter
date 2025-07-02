@@ -1,9 +1,20 @@
 header {
   display: flex;
-   background-color: #00a9e6;
+  background-color: #00a9e6;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 400px; 
+  width: 100%;
+}
+
+.avatar{
+  justify-content: center;
+  align-items: center;
+}
+
+.name{
+  text-align: center;
 }
 
