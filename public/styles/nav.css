@@ -13,9 +13,11 @@
 
 }
 
-span {
+#twitter {
   font-family: 'Bungee', sans-serif;
 }
+
+
 
 #right{
   font-family: 'Source Sans 3', sans-serif ;
@@ -25,7 +27,4 @@ span {
 #arrowDown {
   display: flex;
   justify-content: center;
-  color: red;
-  
-
 }
