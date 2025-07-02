@@ -1,4 +1,4 @@
-#navigation {
+.navigation {
 
   display: flex;
   height: 120px;
@@ -7,21 +7,27 @@
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  padding-top: 1.5em;
+  align-items: center;
   justify-content: space-between;
   font-size: larger;
+  position: fixed;
+  
 
+  
 }
 
-#twitter {
+.tweeter {
   font-family: 'Bungee', sans-serif;
+  
 }
 
 
 
-#right{
+.tweet-btn-container{
+
   font-family: 'Source Sans 3', sans-serif ;
-  padding-left: 1.5em;  
+  align-items: center; 
+
 }
 
 #arrowDown {
