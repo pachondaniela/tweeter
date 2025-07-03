@@ -1,6 +1,11 @@
 .navigation {
 
+  position: fixed;
   display: flex;
+
+  top: 0;
+  left: 0;
+  right: 0;
   height: 120px;
   width: 100%;
   background-color: #4056A1;
@@ -10,7 +15,8 @@
   align-items: center;
   justify-content: space-between;
   font-size: larger;
-  position: fixed;
+  z-index: 1000;
+
   
 
   
@@ -27,7 +33,7 @@
 
   font-family: 'Source Sans 3', sans-serif ;
   align-items: center; 
-   padding-left: 1.5em;
+  padding-left: 1.5em;
   padding-right: 1.5em;
 
 }

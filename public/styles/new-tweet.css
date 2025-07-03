@@ -28,12 +28,10 @@
 .submit-tweet {
   display: flex;
   font-family: 'Bungee', sans-serif;
+   align-items: center;
+  justify-content: space-between;
   padding-top: 0.3em;
-  gap: 80%;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding: 0.5em;
   
 }
 
@@ -42,6 +40,7 @@
   background-color: #4056A1;
   color: #FFFFFF;
   border: none;
+  padding: 0.3em
   
  
 }
@@ -50,6 +49,7 @@
 .submitButton:hover {
   background-color: #7553e6; /* darker green on hover */
   color: #e0f0e9;
+  
 }
 
 form {
