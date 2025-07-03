@@ -1,0 +1,41 @@
+
+.new-tweet {
+  
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 1.5em;
+  color: #545149;
+
+}
+
+form {
+  border-bottom: 5px solid #545149;
+}
+
+#tweet-text {
+  display: flex;
+  width: 100%;
+  mix-blend-mode: lighten; 
+  background-color: inherit;
+  
+}
+
+.submit-tweet {
+  display: flex;
+  font-family: 'Bungee', sans-serif;
+  padding-top: 0.3em;
+  gap: 80%
+ 
+ 
+ 
+}
+
+.submitButton {
+
+  background-color: #4056A1;
+  color: #FFFFFF;
+  border: none;
+ 
+}
+
+

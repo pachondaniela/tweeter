@@ -29,10 +29,11 @@ body {
 
  .container {
   display: flex;
-  width: 90%;
-
-  background-color: #f4f1ec;
+  width: 100%;
+  background-color: inherit;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+ 
+
 
  }
