@@ -8,15 +8,20 @@
 
 }
 
-form {
+.compose-tweet {
+ 
   border-bottom: 5px solid #545149;
+  
 }
 
 #tweet-text {
-  display: flex;
+  
   width: 100%;
-  mix-blend-mode: lighten; 
+  color: #545149;
   background-color: inherit;
+  border: none;
+  font-size: medium;
+
   
 }
 
@@ -24,10 +29,12 @@ form {
   display: flex;
   font-family: 'Bungee', sans-serif;
   padding-top: 0.3em;
-  gap: 80%
- 
- 
- 
+  gap: 80%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  
 }
 
 .submitButton {
@@ -35,7 +42,18 @@ form {
   background-color: #4056A1;
   color: #FFFFFF;
   border: none;
+  
  
 }
 
+
+.submitButton:hover {
+  background-color: #7553e6; /* darker green on hover */
+  color: #e0f0e9;
+}
+
+form {
+
+  margin-bottom: 20px;
+}
 

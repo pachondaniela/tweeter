@@ -4,6 +4,7 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
@@ -22,10 +23,20 @@
      <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+  
+   
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+     <script type="text/javascript"  src="/scripts/composer-char-counter.js"></script>
+
+
   </head>
 
   <body>
@@ -51,12 +62,11 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
-
+      <section class="new-tweet">      
+        <form action= "/api/tweets" method="POST">
         <div class="compose-tweet">
-          <form action= "/api/tweets" method="POST">
           <label for="tweet-text"> What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
+          <textarea name="text" id="tweet-text" maxlength="140"></textarea>
         </div>
           <div class="submit-tweet">
             <button type="submit" class="submitButton">Tweet</button>
