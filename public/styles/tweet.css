@@ -10,9 +10,13 @@ article {
   display: flex;
   justify-content: space-between;
   padding-bottom: 30px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+}
 
+.username {
 
-
+  opacity: 0.6;
 }
 
 
@@ -31,10 +35,18 @@ footer {
   font-size: medium;
 }
 
+i {
+  padding: 0.2em;
+}
+
 i:hover{
-  color: rgb(233, 189, 12)
+  color: rgb(233, 189, 12);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transform: translateY(-5px);
 }
 
 article:hover{
  box-shadow: 10px 5px 5px rgb(152, 162, 227);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+ transform: translateY(-5px);
 }
