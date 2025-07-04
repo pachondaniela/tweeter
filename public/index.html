@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -43,7 +44,7 @@
       
     </nav>
 
-    <header>
+    <header class="intro">
       <div class="avatar">
         <img src = "./images/profile-hex.png" >
       </div>
@@ -69,6 +70,43 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      <article>
+        <header class="usertweet"> 
+          <div class="user"> 
+            Rosa Frilli  
+            <div> @Frilli20  </div>
+          </div> 
+          <div class="tweet">
+            All that glitters is not gold
+          </div>
+        </header>
+        <footer> just now 
+          <div class="icons">
+           <i class="fa-solid fa-retweet"></i>
+           <i class="fa-solid fa-flag"></i>
+           <i class="fa-solid fa-heart"></i>
+           </div>
+        </footer>
+      </article>
+
+        <article>
+        <header class="usertweet"> 
+          <div class="user"> 
+            Descartes
+            <div> @rd  </div>
+          </div> 
+          <div class="tweet">
+            Je pense, donc je suis
+          </div>
+        </header>
+        <footer> 1 day ago 
+           <div class="icons">
+           <i class="fa-solid fa-retweet"></i>
+           <i class="fa-solid fa-flag"></i>
+           <i class="fa-solid fa-heart"></i>
+           </div>
+        </footer>
+      </article>
 
       </section>
     </main>
