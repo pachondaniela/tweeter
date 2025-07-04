@@ -25,8 +25,6 @@
 
     <!-- External JS -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  
-   
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -71,46 +69,8 @@
           </div>
         </form>
 
-      <!-- This is related to the user tweets shown in the page as articles.  -->
-
-      <section>
-      <article>
-        <header class="usertweet"> 
-          <div class="user"> 
-            Rosa Frilli  
-            <div class="username"> @Frilli20  </div>
-          </div> 
-          <div class="tweet">
-            All that glitters is not gold
-          </div>
-        </header>
-        <footer> just now 
-          <div class="icons">
-           <i class="fa-solid fa-retweet"></i>
-           <i class="fa-solid fa-flag"></i>
-           <i class="fa-solid fa-heart"></i>
-           </div>
-        </footer>
-      </article>
-
-        <article>
-        <header class="usertweet"> 
-          <div class="user"> 
-            Descartes
-            <div class="username"> @rd  </div>
-          </div> 
-          <div class="tweet">
-            Je pense, donc je suis
-          </div>
-        </header>
-        <footer> 1 day ago 
-           <div class="icons">
-           <i class="fa-solid fa-retweet"></i>
-           <i class="fa-solid fa-flag"></i>
-           <i class="fa-solid fa-heart"></i>
-           </div>
-        </footer>
-      </article>
+      <!-- This section is rendered via jquery and updated dynamically using AJAX. -->
+      <section class="tweets-container">
       </section>
 
       </section>
