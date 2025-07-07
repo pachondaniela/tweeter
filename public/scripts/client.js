@@ -10,6 +10,7 @@
 // Fake data taken from initial-tweets.json
 
 
+
 $(function() {
   const data = [
     {
@@ -73,9 +74,56 @@ function renderTweets(tweets) {
 
   tweets.forEach(t => {
     const $tweetEl = createTweetElement(t);
-    $container.append($tweetEl);
+    $container.prepend($tweetEl);
   });
 }
 
 
 
+// Use AJAX to submit tweet
+
+
+
+
+function loadTweets() {
+  $.ajax({
+    url: '/api/tweets',
+    method: 'GET',
+    dataType: 'json'
+  }).done(function(tweets) {
+    renderTweets(tweets);
+  }).fail(function(err) {
+    console.error('Failed to load tweets:', err);
+  });
+}
+
+
+
+$(function() {
+  
+  $('form').on('submit', function(event) {
+    event.preventDefault();  // this **must** be first
+
+    const tweetText = $('#tweet-text').val().trim();
+    if (!tweetText) return;
+
+    $.ajax({
+      url: '/api/tweets',
+      method: 'POST',
+      data: { text: tweetText },
+      dataType: 'json'
+    })
+    .done((newTweet) => {
+      $('.tweets-container').prepend(createTweetElement(newTweet));
+      $('#tweet-text').val('');
+      $('.counter').text(140).removeClass('error');
+    })
+    .fail((err) => console.error('Error posting tweet:', err));
+
+    return false;  // fallback to further prevent default
+  });
+
+  setCharacterCounter();
+  loadTweets();  // fetch existing tweets
+
+});

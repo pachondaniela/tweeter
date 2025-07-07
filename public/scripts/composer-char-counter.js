@@ -1,5 +1,5 @@
-$(function () {
-  $('.tweet-text').on('input', function() {
+function setCharacterCounter() {
+  $('#tweet-text').on('input', function() {
     const maxLength = 140;
     const currentLength = $(this).val().length;
     const counter = $(this).closest('.new-tweet').find('.counter');
@@ -8,4 +8,10 @@ $(function () {
     counter.text(remaining);
     counter.toggleClass('error', remaining < 0);
   });
-});
+};
+
+  $(function() {
+    setCharacterCounter();
+  });
+
+  module.exports = {setCharacterCounter}
