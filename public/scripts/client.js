@@ -9,8 +9,6 @@
 // Test / driver code (temporary). Eventually will get this from the server.
 // Fake data taken from initial-tweets.json
 
-
-
 $(function() {
   const data = [
     {
@@ -28,7 +26,9 @@ $(function() {
 });
 
 function daysAgo(ts) {
-  return Math.floor((Date.now() - ts) / (1000 * 60 * 60 * 24));
+  return timeago.format(ts)
+  
+  // return Math.floor((Date.now() - ts) / (1000 * 60 * 60 * 24));
 }
 
 function createTweetElement(tweet) {
@@ -60,7 +60,7 @@ function createTweetElement(tweet) {
   $article.find('.tweet').text(tweet.content.text);
 
   const days = daysAgo(tweet.created_at);
-  $article.find('.days-ago').text(`${days} day${days !== 1 ? 's' : ''} ago`);
+  $article.find('.days-ago').text(`${days}`);
 
   return $article;
   
