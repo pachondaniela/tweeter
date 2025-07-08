@@ -27,8 +27,6 @@ $(function() {
 
 function daysAgo(ts) {
   return timeago.format(ts)
-  
-  // return Math.floor((Date.now() - ts) / (1000 * 60 * 60 * 24));
 }
 
 function createTweetElement(tweet) {
@@ -90,9 +88,9 @@ function loadTweets() {
     url: '/api/tweets',
     method: 'GET',
     dataType: 'json'
-  }).done(function(tweets) {
+  }).then(function(tweets) {
     renderTweets(tweets);
-  }).fail(function(err) {
+  }).catch(function(err) {
     console.error('Failed to load tweets:', err);
   });
 }
@@ -105,7 +103,15 @@ $(function() {
     event.preventDefault();  // this **must** be first
 
     const tweetText = $('#tweet-text').val().trim();
-    if (!tweetText) return;
+    if (!tweetText){
+      alert("Please enter your tweeter message!")
+      return;
+    };
+
+    if (tweetText.length > 140) {
+      alert("Your message is too long please only use 140 characters!")
+      return;
+    }
 
     $.ajax({
       url: '/api/tweets',
@@ -113,12 +119,12 @@ $(function() {
       data: { text: tweetText },
       dataType: 'json'
     })
-    .done((newTweet) => {
+    .then((newTweet) => {
       $('.tweets-container').prepend(createTweetElement(newTweet));
       $('#tweet-text').val('');
       $('.counter').text(140).removeClass('error');
     })
-    .fail((err) => console.error('Error posting tweet:', err));
+    .catch((err) => console.error('Error posting tweet:', err));
 
     return false;  // fallback to further prevent default
   });
