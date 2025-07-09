@@ -76,11 +76,28 @@ function renderTweets(tweets) {
   });
 }
 
+// Validation Function
 
+function isTweetValid (tweetText) {
+   if (!tweetText){
+      $('.error-message')
+      .text('Please enter a tweet!')
+      .show();
+      return false;
+    }
+      $('.error-message').hide()
+
+    if (tweetText.length > 140) {
+      $('.error-message')
+      .text('You cannot exceed 140 characters for your tweet!')
+      .show() 
+      return false;
+    }
+     $('.error-message').hide()
+     return true;
+}
 
 // Use AJAX to submit tweet
-
-
 
 
 function loadTweets() {
@@ -103,20 +120,14 @@ $(function() {
     event.preventDefault();  // this **must** be first
 
     const tweetText = $('#tweet-text').val().trim();
-    if (!tweetText){
-      alert("Please enter your tweeter message!")
-      return;
-    };
-
-    if (tweetText.length > 140) {
-      alert("Your message is too long please only use 140 characters!")
+    if(!isTweetValid(tweetText)) {
       return;
     }
 
     $.ajax({
       url: '/api/tweets',
       method: 'POST',
-      data: { text: tweetText },
+      data: { text: $('#tweet-text').val().trim()},
       dataType: 'json'
     })
     .then((newTweet) => {

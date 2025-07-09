@@ -57,3 +57,11 @@ form {
   margin-bottom: 20px;
 }
 
+.error-message {
+   font-family: 'Bungee', sans-serif;
+   font-size: small;
+   color: red;
+   font-weight: lighter;
+   padding-bottom: 1em;
+}
+
