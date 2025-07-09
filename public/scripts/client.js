@@ -124,6 +124,10 @@ $(function() {
       return;
     }
 
+    $('#tweet-text').on("input", function() {
+      $('.error-message').hide()
+    })
+
     $.ajax({
       url: '/api/tweets',
       method: 'POST',
