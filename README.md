@@ -1,4 +1,4 @@
-# Tweeter Project
+# Tweeter Project 
 
 Tweeter is a simple, single-page Twitter clone.
 
@@ -16,3 +16,19 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- jquery
+
+- **Front-End:**
+  - HTML5
+  - CSS3 (with Normalize.css)
+  - JavaScript (jQuery)
+  - AJAX
+  - Font Awesome
+  - Google Fonts
+
+- **Libraries & Frameworks:**
+  - [Normalize.css](https://necolas.github.io/normalize.css/)
+  - [Font Awesome](https://fontawesome.com/)
+  - [Google Fonts](https://fonts.google.com/)
+  - [Timeago.js](https://timeago.org/)
+  - [jQuery](https://jquery.com/)
