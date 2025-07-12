@@ -38,3 +38,23 @@ body {
 
 
  }
+
+ /* Make the website reponsive - after 768px change the format of the page in the deskptop*/
+
+ @media only screen and (min-width: 768px) {
+
+  body {
+    display: flex;
+    flex-direction: row;
+  
+  }
+
+.intro {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  margin-left: 1em;
+ 
+}
+
+ }
