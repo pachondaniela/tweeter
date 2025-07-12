@@ -33,6 +33,6 @@ This repository is the starter code for the project: Students will fork and clon
   - [Timeago.js](https://timeago.org/)
   - [jQuery](https://jquery.com/)
 
-- **Sample 
+- **Project Snipit** 
 
 ![alt text](public/images/readmepict.png)
