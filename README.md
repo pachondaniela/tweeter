@@ -32,3 +32,7 @@ This repository is the starter code for the project: Students will fork and clon
   - [Google Fonts](https://fonts.google.com/)
   - [Timeago.js](https://timeago.org/)
   - [jQuery](https://jquery.com/)
+
+- **Sample 
+
+![alt text](image.png)
